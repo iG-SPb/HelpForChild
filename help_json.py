@@ -17,16 +17,15 @@ for r in data['people']:
     print('Website: ' + r['website'])
     print('From: ' + r['from'])
 
-f = open('venv/Scripts/data_file.json', 'w')
+f = open('data_file.json', 'a')
 with f as outfile:
-    json.dump(data, outfile)
+    print(json.dumps(data, indent=4), file=f)
 f.close()
 
-f = open('venv/Scripts/data_file.json', 'r')
+f = open('data_file.json', 'r')
 with f as json_file:
     data_file = json.load(json_file)
-
-print(data_file)
+f.close()
 
 for p in data_file['people']:
     data['people'].append({
@@ -34,7 +33,6 @@ for p in data_file['people']:
         'website': p['website'],
         'from': p['from']
     })
-f.close()
 
 print('=========================')
 for z in data['people']:
@@ -42,7 +40,7 @@ for z in data['people']:
     print('Website: ' + z['website'])
     print('From: ' + z['from'])
 
-f = open('venv/Scripts/data_file.json', 'w')
+f = open('data_file.json', 'w')
 with f as outfile:
     json.dump(data, outfile)
 f.close()
