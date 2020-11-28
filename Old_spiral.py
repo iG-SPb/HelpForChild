@@ -1,3 +1,4 @@
+# new comment
 print("start new >>", end="")
 n = int(input())
 array = [[".."] * n for i in range(n)]
