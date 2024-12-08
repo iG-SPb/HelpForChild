@@ -19,9 +19,9 @@
 
 Установите зависимости с помощью pip:
 
-```bash
+<pre><code class="bash">
 pip install pytest allure-pytest paramiko pysmb
-```
+</code></pre>
 
 ## Конфигурация
 
